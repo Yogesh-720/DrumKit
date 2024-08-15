@@ -1,12 +1,12 @@
-var button=document.getElementsByClassName("drum").length;
+var button = $(".drum").length;
 
-function play(key){
+function play(key) {
     switch (key) {
         case "a":
-            var snare= new Audio("src/Snare-Drum-Hit-Level-1a-www.fesliyanstudios.com.mp3");
+            var snare = new Audio("src/Snare-Drum-Hit-Level-1a-www.fesliyanstudios.com.mp3");
             snare.play();
             break;
-    
+
         case "s":
             var bass = new Audio('src/Bass-Drum-Hit-Level-3a-www.fesliyanstudios.com.mp3');
             bass.play();
@@ -26,37 +26,38 @@ function play(key){
             var crash = new Audio('src/Crash-Cymbal-Hit-C-www.fesliyanstudios.com.mp3');
             crash.play();
             break;
+
         case "h":
             var splash = new Audio('src/Splash-Cymbal-Hit-B-www.fesliyanstudios.com.mp3');
             splash.play();
             break;
+
         case "j":
             var hihat = new Audio('src/Hi-Hat-Closed-Hit-D1-www.fesliyanstudios.com.mp3');
             hihat.play();
             break;
     }
 }
-for(var i=0;i<button;i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click",function (){
-        let btn = this.innerHTML;
+
+$(".drum").each(function() {
+    $(this).click(function() {
+        let btn = $(this).html();
         play(btn);
         buttonAnimation(btn);
     });
-}
+});
 
-document.addEventListener("keypress", function(e){
+$(document).keypress(function(e) {
     play(e.key);
     buttonAnimation(e.key);
 });
 
 function buttonAnimation(currentKey) {
+    var activeButton = $("." + currentKey);
 
-  var activeButton = document.querySelector("." + currentKey);
+    activeButton.addClass("pressed");
 
-  activeButton.classList.add("pressed");
-
-  setTimeout(function() {
-    activeButton.classList.remove("pressed");
-  }, 100);
-
+    setTimeout(function() {
+        activeButton.removeClass("pressed");
+    }, 100);
 }
