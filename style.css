@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.5)),url(src/back.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-size: 80px;
+    color: rgb(216, 219, 218);
+    
+}
+.pics{
+    width: auto;
+    margin: 110px auto;
+    text-align: center;
+
+}
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
+.drum{
+    width: 130px;
+    display: inline-block;
+    border: solid rgb(160, 182, 196) 1px;
+    border-radius: 8px;
+    height: 130px;
+    font-size: 50px;
+    color: rgb(223, 38, 38);
+    text-align: center;
+    margin: 10px;
+}
+.a{
+    background: url(src/snareDrum.jpg);
+    background-position: center;
+    background-size: 138%;
+}
+.s{
+    background: url(src/bassDrum.jpg);
+    background-position: center;
+    background-size: 110%;
+}
+.d{
+    background: url(src/tomdrum.jpg);
+    background-position: center;
+    background-size: 138%;
+}
+.f{
+    background: url(src/sticks.jpg);
+    background-position: center;
+    background-size: 125%;
+}
+.g{
+    background: url(src/crashCymbal.jpg);
+    background-position: center;
+    background-size: 138%;
+}
+.h{
+    background: url(src/splashCymbal.jpg);
+    background-position: center;
+    background-size: 138%;
+}
+.j{
+    background: url(src/hihat.jpg);
+    background-position: center;
+    background-size: 118%;
+}
